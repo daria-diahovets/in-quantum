@@ -1,11 +1,23 @@
-import styles from "./styles/page.module.css";
+import About from "@/components/About/About";
+import Education from "@/components/Education/Education";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Promo from "@/components/Promo/Promo";
+import Referrals from "@/components/Referrals/Referrals";
+import Subscriptions from "@/components/Subscriptions/Subscriptions";
+import Team from "@/components/Team/Team";
 
 export default function Home() {
   return (
-    <div>
-      <h1>
-        <span className="purple">Test Title </span>
-      </h1>
-    </div>
+    <>
+      <Header />
+      <Promo />
+      <About />
+      <Education />
+      <Team />
+      <Subscriptions />
+      <Referrals />
+      <Footer />
+    </>
   );
 }

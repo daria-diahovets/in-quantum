@@ -3,6 +3,8 @@
   --foreground: #ffffff;
   --gray-color-text: #f6eeff;
   --purple-color-text: #9e50ff;
+
+  --border-radios: 52px
 }
 *,
 *::after,
@@ -50,6 +52,7 @@ h2 {
 }
 
 h3 {
+  font-family: var(--font-proxima-extra-bold);
   color: #e5e3e7;
   font-size: 2.5rem;
 }
