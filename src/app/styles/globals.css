@@ -44,11 +44,13 @@ a {
 h1 {
   font-size: 8.33rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 10rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {

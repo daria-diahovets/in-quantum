@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row{
+    width: 100%;
+    position: relative;
+    margin-top: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row img{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card{
+    width: 600px;
+    border: 1px solid white;
+    text-align: center;
+    padding: 23px 86px;
+}
+
