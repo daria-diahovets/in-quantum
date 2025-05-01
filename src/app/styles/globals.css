@@ -4,7 +4,8 @@
   --gray-color-text: #f6eeff;
   --purple-color-text: #9e50ff;
 
-  --border-radios: 52px
+  --border-radios: 52px;
+  --transition: all 0.3s;
 }
 *,
 *::after,
@@ -25,6 +26,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+img {
+  user-select: none;
+}
 
 .container {
   width: 100%;
@@ -35,7 +39,12 @@ a {
   color: var(--purple-color-text);
   text-transform: uppercase;
   background: #9e50ff;
-  background: linear-gradient(90deg, rgba(95, 48, 153, 1) -30%, rgba(158, 80, 255, 1) 50%, rgba(95, 48, 153, 1) 130%);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 48, 153, 1) -30%,
+    rgba(158, 80, 255, 1) 50%,
+    rgba(95, 48, 153, 1) 130%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -70,6 +79,7 @@ p {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 @media (hover: hover) and (pointer: fine) {
