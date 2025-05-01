@@ -1,7 +1,11 @@
+import { ReactNode } from "react";
 import classes from "./Button.module.css";
 
-export default function Button() {
-  return (
-    <div></div>
-  );
+interface IBtn {
+  link: string;
+  children: ReactNode;
+}
+
+export default function Button({ link, children }: IBtn) {
+  return <a href={link} className={classes.btn}>{children}</a>;
 }
