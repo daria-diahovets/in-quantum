@@ -1,0 +1,34 @@
+.btn {
+    width: 140px;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--foreground);
+    background-color: var(--background);
+
+    overflow: hidden;
+  }
+  
+  .btn span {
+    font-family: var(--font-source-sans);
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .btn:hover span {
+    animation: slide .7s;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-48px);
+    }
+    51% {
+      transform: translateY(48px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

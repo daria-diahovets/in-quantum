@@ -1,7 +1,17 @@
+import Link from "next/link";
+import { type ReactNode } from "react";
+
 import classes from "./Button.module.css";
 
-export default function Button() {
+interface IButtonProps {
+  href: string;
+  children: ReactNode;
+}
+
+export default function Button({ href, children }: IButtonProps) {
   return (
-    <div></div>
+    <Link href={href} className={classes.btn}>
+      <span>{children}</span>
+    </Link>
   );
 }
