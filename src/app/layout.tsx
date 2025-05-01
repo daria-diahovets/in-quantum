@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {
   proximaBold,
   proximaExtraBold,
-  sourceSansRegular,
   baradigBold,
 } from "./styles/fonts";
 
@@ -24,7 +23,6 @@ export default function RootLayout({
         className={`
           ${proximaBold.variable} 
           ${proximaExtraBold.variable} 
-          ${sourceSansRegular.variable} 
           ${baradigBold.variable}`}
       >
         {children}
