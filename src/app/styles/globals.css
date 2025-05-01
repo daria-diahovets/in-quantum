@@ -4,7 +4,7 @@
   --gray-color-text: #f6eeff;
   --purple-color-text: #9e50ff;
 
-  --border-radios: 52px
+  --border-radios: 52px;
 }
 *,
 *::after,
@@ -35,7 +35,12 @@ a {
   color: var(--purple-color-text);
   text-transform: uppercase;
   background: #9e50ff;
-  background: linear-gradient(90deg, rgba(95, 48, 153, 1) -30%, rgba(158, 80, 255, 1) 50%, rgba(95, 48, 153, 1) 130%);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 48, 153, 1) -30%,
+    rgba(158, 80, 255, 1) 50%,
+    rgba(95, 48, 153, 1) 130%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -44,11 +49,13 @@ a {
 h1 {
   font-size: 8.33rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 10rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
