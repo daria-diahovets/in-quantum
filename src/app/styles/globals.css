@@ -5,6 +5,7 @@
   --purple-color-text: #9e50ff;
 
   --border-radios: 52px;
+  --transition: all 0.3s;
 }
 *,
 *::after,
@@ -24,6 +25,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+img {
+  user-select: none;
 }
 
 .container {
@@ -75,6 +79,7 @@ p {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 @media (hover: hover) and (pointer: fine) {
