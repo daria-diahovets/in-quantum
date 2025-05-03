@@ -26,9 +26,9 @@
   top: -15%;
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;
+  width: 100%;
   height: 20%;
-  background-color: #140C1D;
+  background-color: #140c1d;
   filter: blur(100px);
   z-index: -1;
 }
@@ -61,8 +61,7 @@
   width: 390px;
   height: 275px;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  box-shadow:
-    inset 0 0 68px 0 rgba(255, 255, 255, 0.2),
+  box-shadow: inset 0 0 68px 0 rgba(255, 255, 255, 0.2),
     0px 0px 20px rgba(255, 255, 255, 0.3);
 }
 
@@ -94,9 +93,69 @@
 .text div {
   font-size: 2rem;
   color: var(--background);
-  opacity: .7;
+  opacity: 0.7;
 }
 
-@media (max-width: 1920px) {}
+@media (max-width: 1920px) {
+  .team {
+    padding-top: 7.8vw;
+    padding-bottom: 5.1vw;
+  }
 
-@media (max-width: 768px) {}
+  .team::before {
+    top: -0.33vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .team::after {
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 20%;
+  }
+
+  .grid {
+    gap: 0.97vw;
+  }
+
+  .merged p {
+    margin-top: 1.3vw;
+    width: 34.2vw;
+  }
+
+  .element {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+  }
+
+  .body {
+    width: 20.5vw;
+    height: 14.95vw;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: inset 0 0 3.54vw 0 rgba(255, 255, 255, 0.2),
+      0px 0px 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .text {
+    width: 20.5vw;
+    height: 6.04vw;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: inset 0 0 3.54vw 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .text h4 {
+    font-size: 2.5rem;
+  }
+
+  .text div {
+    font-size: 2rem;
+    color: var(--background);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+}
