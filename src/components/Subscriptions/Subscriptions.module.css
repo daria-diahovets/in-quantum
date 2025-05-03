@@ -1,6 +1,7 @@
 .subscr {
   position: relative;
   padding: 50px 0 150px 0;
+  overflow: hidden;
 }
 
 .subscr::before {
@@ -25,9 +26,9 @@
   top: -15%;
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;
+  width: 100%;
   height: 20%;
-  background-color: #140C1D;
+  background-color: #140c1d;
   filter: blur(100px);
   z-index: -1;
 }
@@ -88,8 +89,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow:
-    0px 0px 30px rgba(255, 255, 255, 0.3),
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3),
     inset 0px 0px 70px rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -144,8 +144,7 @@
   width: 70px;
   height: 70px;
   background-color: var(--purple-color-text);
-  box-shadow:
-    inset 0px 1px 1px rgba(255, 255, 255, 0.25),
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
     inset 0px -4px 1px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   cursor: pointer;
@@ -157,8 +156,7 @@
 }
 
 .price div:active {
-  box-shadow:
-    inset 0px 1px 1px rgba(255, 255, 255, 0.25),
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
     inset 0px -2px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(2px);
 }
@@ -169,6 +167,98 @@
 }
 
 @media (max-width: 1920px) {
+  .subscr {
+    padding: 2.61vw 0 7.82vw 0;
+  }
+
+  .subscr::before {
+    top: -0.52vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .subscr::after {
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 20%;
+    filter: blur(5.3vw);
+  }
+
+  #glass-left,
+  #glass-right {
+    position: absolute;
+    width: 30.73vw;
+    height: 25.1vw;
+  }
+
+  @keyframes glass-left {
+    from {
+      bottom: -25%;
+    }
+
+    to {
+      bottom: -35%;
+    }
+  }
+
+  @keyframes glass-right {
+    from {
+      top: -5%;
+    }
+
+    to {
+      top: -12%;
+    }
+  }
+
+  .wrapper {
+    gap: 5.21vw;
+    margin-top: 3.65vw;
+  }
+
+  .card {
+    width: 36.5vw;
+    height: 31.3vw;
+    box-shadow: 0px 0px 1.56vw rgba(255, 255, 255, 0.3),
+      inset 0px 0px 3.65vw rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4.22vw 5.3vw 3.43vw 5.3vw;
+  }
+
+  .card h4 {
+    font-size: 2vw;
+  }
+
+  .card p {
+    font-size: 1.56vw;
+  }
+
+  .price {
+    gap: 1.56vw;
+  }
+
+  .price div {
+    width: 3.65vw;
+    height: 3.65vw;
+    background-color: var(--purple-color-text);
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
+      inset 0px -0.21vw 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.42vw;
+    transition: var(--transition);
+  }
+
+  .price div img {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .price span {
+    font-size: 2.5vw;
+  }
 }
 @media (max-width: 768px) {
 }
