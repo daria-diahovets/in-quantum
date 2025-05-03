@@ -130,3 +130,14 @@
     font-size: 5.5vw;
   }
 }
+
+@media (max-width: 480px) {
+  .menu {
+    width: 70%;
+    gap: 7vw;
+    padding: 23.5vw 2.7vw 7.9vw 9vw;
+  }
+  .menu a {
+    font-size: 6vw;
+  }
+} 

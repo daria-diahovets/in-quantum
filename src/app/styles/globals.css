@@ -123,6 +123,9 @@ p {
 }
 
 @media (max-width: 768px) {
+  :root{
+    --border-radius: 6.8vw;
+  }
   h1 {
     font-size: 7.1vw;
   }
