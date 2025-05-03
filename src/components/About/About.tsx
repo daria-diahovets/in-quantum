@@ -23,6 +23,13 @@ export default function About() {
           <span className="purple">ПРО нас</span>
         </h2>
         <h3>Хто ми і чому нам можна довіряти?</h3>
+        <Image
+            id={classes.pipe}
+            width={530}
+            height={518}
+            src={"/images/about/pipe.png"}
+            alt="pipe"
+          />
         <div className={classes.wrapper}>
           <div className={classes.card}>
             <p>
@@ -32,13 +39,6 @@ export default function About() {
               підтримку.
             </p>
           </div>
-          <Image
-            id={classes.pipe}
-            width={530}
-            height={518}
-            src={"/images/about/pipe.png"}
-            alt="pipe"
-          />
           <div className={classes.card}>
             <p>
               Ми створили програму, де немає нудних лекцій — тільки цікаві
