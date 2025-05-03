@@ -39,7 +39,6 @@
 
 .wrapper {
   width: 100%;
-  position: relative;
   margin-top: 160px;
   display: flex;
   flex-direction: row;
@@ -49,18 +48,18 @@
 @keyframes pipe {
   from {
     transform: rotate(0) translate(-50%) scale(1);
-    top: -50%;
+    top: 35%;
   }
 
   to {
     transform: rotate(10deg) translate(-50%) scale(0.9);
-    top: -40%;
+    top: 40%;
   }
 }
 
 #pipe {
   position: absolute;
-  top: -50%;
+  top: 35%;
   left: 50%;
   transform-origin: center;
   transform: translate(-50%);
@@ -77,6 +76,7 @@
   border-image: linear-gradient(to right, #a2a2a280 0%, #ffffff00 25%, #ffffff00 75%, #a2a2a280 100%) 1;
   border-width: 1px;
   border-style: solid;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .1) 0%, rgba(133, 129, 129, .1) 50%, rgba(0, 0, 0, .1) 100%);
   text-align: center;
   padding: 23px 86px;
 }
@@ -151,4 +151,51 @@
   }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .about {
+    padding-top: 6.6vw;
+    padding-bottom: 13.1vw;
+  }
+
+  .wrapper {
+    margin-top: 7vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vw;
+  }
+
+  #pipe {
+    display: none;
+  }
+
+  .card {
+    width: 78.2vw;
+    padding: 5.3vw 6.6vw;
+  }
+
+  @keyframes glass {
+    from {
+      top: 50%;
+      transform: rotate(0deg);
+    }
+
+    to {
+      top: 40%;
+      transform: rotate(10deg);
+    }
+  }
+
+  #glass-left {
+    top: 50%;
+    width: 27.4vw;
+    height: 29.8vw;
+    left: -15%;
+  }
+
+  #glass-right {
+    top: 50%;
+    width: 27.5vw;
+    height: 28.3vw;
+    right: -15%;
+  }
+}
