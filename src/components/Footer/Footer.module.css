@@ -1,5 +1,11 @@
-.wrapper {
+.footer {
+  padding-top: 60px;
+  padding-bottom: 100px;
   border-top: 1px solid white;
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.5), inset -100px 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +25,7 @@
   font-size: 2.6rem;
 }
 
-.buttons {
+.links {
   position: relative;
   margin-top: 60px;
   width: 830px;
@@ -30,7 +36,7 @@
   gap: 20px;
 }
 
-.buttons::before {
+.links::before {
   content: "";
   position: absolute;
   width: 70px;
@@ -41,23 +47,84 @@
   left: 0;
 }
 
-.buttons::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    bottom: 0;
-    right: 0;
+.links::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  bottom: 0;
+  right: 0;
+}
+
+.links a {
+  width: 140px;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--foreground);
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.links a span {
+  font-family: var(--font-source-sans);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .links a:hover span {
+    animation: slide 0.5s;
+  }
+}
+
+.privacy {
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.privacy span {
+  font-size: 1.3rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
   }
 
-  .privacy{
-    margin-top: 60px;
-    display: flex;
-    gap: 30px;
+  50% {
+    transform: translateY(-48px);
   }
 
-  .privacy span{
-    font-size: 1.3rem;
+  51% {
+    transform: translateY(48px);
   }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#glass-left,
+#glass-right {
+  position: absolute;
+  z-index: -1;
+}
+
+#glass-left {
+  left: -10%;
+}
+
+#glass-right {
+  right: -10%;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 1920px) {
+}
+@media (max-width: 768px) {
+}

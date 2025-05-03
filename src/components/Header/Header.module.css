@@ -1,25 +1,42 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   height: 100px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--background);
-  z-index: 10;
+  transition: all .5s;
+  z-index: 11;
 }
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+.header.visible {
+  transform: translateY(0);
+}
+
 .header::before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
   background-image: url("/images/header/noize.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  opacity: 0.5;
   z-index: -1;
 }
+
 .header::after {
   content: "";
   position: absolute;
@@ -29,9 +46,59 @@
   height: 1px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgb(255, 255, 255), rgba(255, 255, 255, 0.2));
 }
+
+#hamburger,
+#close {
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
 .logo {
   font-family: var(--font-baradig-bold);
   font-size: 3.33rem;
   text-align: center;
   color: var(--foreground);
+  margin-right: auto;
 }
+
+@media (max-width: 1920px) {
+  .header {
+    height: 5.25vw;
+    padding: 0 1.6vw;
+  }
+
+  #hamburger,
+  #close {
+    width: 2.1vw;
+    height: 2.1vw;
+  }
+
+  .logo {
+    font-size: 2.05vw;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 100px;
+    padding: 0 25px;
+  }
+
+  #hamburger,
+  #close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 320px) {}

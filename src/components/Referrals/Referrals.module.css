@@ -1,8 +1,24 @@
-.wrapper {
-  margin-top: 222px;
+.referrals {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.referrals::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 50%;
+  background-color: #140C1D;
+  filter: blur(100px);
+  z-index: -1;
 }
 
 .title {
@@ -43,6 +59,13 @@
   transition: all .3s;
 }
 
-.row button:hover{
+@media (hover: hover) and (pointer: fine) {
+  .row button:hover {
     background-color: #50109e;
+  }
+}
+
+@media (max-width: 1920px) {
+}
+@media (max-width: 768px) {
 }

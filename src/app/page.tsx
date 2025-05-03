@@ -1,11 +1,11 @@
-import About from "@/components/About/About";
-import Education from "@/components/Education/Education";
-import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Promo from "@/components/Promo/Promo";
-import Referrals from "@/components/Referrals/Referrals";
-import Subscriptions from "@/components/Subscriptions/Subscriptions";
+import About from "@/components/About/About";
+import Education from "@/components/Education/Education";
 import Team from "@/components/Team/Team";
+import Subscriptions from "@/components/Subscriptions/Subscriptions";
+import Referrals from "@/components/Referrals/Referrals";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,10 +14,9 @@ export default function Home() {
       <Promo />
       <About />
       <Education />
-      <Team />
-      <Subscriptions />
-      <Referrals />
-      <Footer />
+      {/* <Team /> */}
+      {/* <Subscriptions /> */}
+      {/* <Footer /> */}
     </>
   );
 }
