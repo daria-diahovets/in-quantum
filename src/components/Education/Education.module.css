@@ -1,0 +1,278 @@
+.education {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+  overflow: clip visible;
+}
+
+.education::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/education/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.education::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20%;
+  background-color: #140C1D;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.education p {
+  max-width: 700px;
+  margin: 40px auto 105px auto;
+}
+
+@keyframes glass {
+  from {
+    top: -10%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+#glass-left,
+#glass-right {
+  position: absolute;
+  animation-name: glass;
+  animation-timing-function: ease;
+  animation-timeline: --window;
+}
+
+#glass-left {
+  top: 0%;
+  left: 20px;
+}
+
+#glass-right {
+  top: 0%;
+  right: 20px;
+  transform: scaleX(-1);
+}
+
+.wrapper {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 80px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  /* border: 1px solid white; */
+  border-radius: 100%;
+  aspect-ratio: 1;
+  box-shadow:
+    inset 0px 50px 30px rgba(255, 255, 255, 0.05),
+    0px -1px 1px rgba(255, 255, 255, 0.8),
+    1px 0px 1px rgba(255, 255, 255, 0.2),
+    -1px 0px 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 80%);
+  margin-bottom: 15px;
+}
+
+.item .image img {
+  object-fit: contain;
+  height: fit-content;
+}
+
+.item:nth-child(1) .image img {
+  width: 283px;
+}
+
+.item:nth-child(2) .image img {
+  width: 269px;
+}
+
+.item:nth-child(3) .image img {
+  width: 200px;
+  transform: translateX(-10px);
+}
+
+.item:nth-child(4) .image img {
+  width: 240px;
+}
+
+.item .text {
+  font-size: 2.5rem;
+  font-family: var(--font-proxima-extra-bold);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 1920px) {
+  .education {
+    padding-top: 7.85vw;
+    padding-bottom: 7.85vw;
+  }
+
+  .education::before {
+    top: -0.55vw;
+  }
+
+  .education::after {
+    filter: blur(5.3vw);
+  }
+
+  .education p {
+    max-width: 36.5vw;
+    margin: 2.1vw auto 5.5vw auto;
+  }
+
+  #glass-left,
+  #glass-right {
+    width: 24.5vw;
+    height: 20.85vw;
+  }
+
+  #glass-left {
+    left: 1.1vw;
+  }
+
+  #glass-right {
+    right: 1.1vw;
+  }
+
+  .wrapper {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 4.2vw;
+  }
+
+  .item .image {
+    width: 18.8vw;
+    margin-bottom: 0.8vw;
+  }
+
+  .item:nth-child(1) .image img {
+    width: 14.75vw;
+  }
+
+  .item:nth-child(2) .image img {
+    width: 14.05vw;
+  }
+
+  .item:nth-child(3) .image img {
+    width: 10.45vw;
+    transform: translateX(-0.55vw);
+  }
+
+  .item:nth-child(4) .image img {
+    width: 12.5vw;
+  }
+
+  .item .text {
+    font-size: 1.6vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding-top: 13.1vw;
+    padding-bottom: 13.1vw;
+  }
+
+  .education::before {
+    top: -1.4vw;
+  }
+
+  .education::after {
+    height: 3%;
+    top: 0;
+    filter: blur(6.6vw);
+  }
+
+  .education p {
+    max-width: 65.2vw;
+    margin: 3.3vw auto 6.6vw auto;
+  }
+
+  #glass-left,
+  #glass-right {
+    width: 47vw;
+    height: 40vw;
+    opacity: .5;
+  }
+
+  @keyframes glass {
+    from {
+      top: -5%;
+    }
+
+    to {
+      top: 0%;
+    }
+  }
+
+  #glass-left {
+    top: 0;
+    left: -25%;
+  }
+
+  #glass-right {
+    top: 0;
+    right: -25%;
+  }
+
+  .wrapper {
+    margin-bottom: 6.6vw;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vw;
+  }
+
+  .item .image {
+    width: 71.7vw;
+    margin-bottom: 4vw;
+  }
+
+  .item:nth-child(1) .image img {
+    width: 52.2vw;
+  }
+
+  .item:nth-child(2) .image img {
+    width: 52.2vw;
+  }
+
+  .item:nth-child(3) .image img {
+    width: 41.7vw;
+    transform: translateX(-2.7vw);
+  }
+
+  .item:nth-child(4) .image img {
+    width: 52.2vw;
+  }
+
+  .item .text {
+    font-size: 6.3vw;
+  }
+}

@@ -1,0 +1,236 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  border-top: 1px solid white;
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.5),
+    inset -100px 0 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links {
+  position: relative;
+  margin-top: 60px;
+  width: 830px;
+  height: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  top: 0;
+  left: 0;
+}
+
+.links::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  bottom: 0;
+  right: 0;
+}
+
+.links a {
+  width: 140px;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--foreground);
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.links a span {
+  font-family: var(--font-source-sans);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.privacy {
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
+}
+
+.privacy span {
+  font-size: 1.3rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-48px);
+  }
+
+  51% {
+    transform: translateY(48px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#glass-left,
+#glass-right {
+  position: absolute;
+  z-index: -1;
+}
+
+#glass-left {
+  left: -10%;
+}
+
+#glass-right {
+  right: -10%;
+  transform: scaleX(-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .links a:hover span {
+    animation: slide 0.5s;
+  }
+}
+
+@media (max-width: 1920px) {
+  .footer {
+    padding-top: 3.13vw;
+    padding-bottom: 5.21vw;
+  }
+
+  .wrapper img {
+    width: 21.35vw;
+    height: 5.21vw;
+  }
+
+  .links {
+    margin-top: 3.13vw;
+    width: 43.23vw;
+    height: 6.35vw;
+    gap: 1.04vw;
+  }
+
+  .links::before {
+    width: 3.65vw;
+    height: 3.65vw;
+  }
+
+  .links::after {
+    width: 3.65vw;
+    height: 3.65vw;
+  }
+
+  .links a {
+    width: 7.29vw;
+    min-height: 3.03vw;
+  }
+
+  .links a span {
+    font-size: 0.625vw;
+  }
+
+  .privacy {
+    margin-top: 3.13vw;
+    gap: 1.56vw;
+  }
+
+  .privacy span {
+    font-size: 0.81vw;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-2.5vw);
+    }
+
+    51% {
+      transform: translateY(2.5vw);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #glass-left,
+  #glass-right {
+    width: 36.67vw;
+    height: 21.04vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 6.6vw;
+    padding-bottom: 7.9vw;
+  }
+
+  .wrapper img {
+    width: 52.1vw;
+    height: 13.1vw;
+  }
+
+  .links {
+    margin-top: 3.5vw;
+    width: 75vw;
+    height: 71.7vw;
+    gap: 3.3vw;
+    flex-direction: column;
+  }
+
+  .links::before {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .links::after {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .links a {
+    width: 65.2vw;
+    min-height: 9.8vw;
+  }
+
+  .links a span {
+    font-size: 3.2vw;
+  }
+
+  .privacy {
+    margin-top: 5.3vw;
+  }
+
+  .privacy span {
+    font-size: 2.5vw;
+  }
+
+  #glass-left,
+  #glass-right {
+    display: none;
+  }
+}
