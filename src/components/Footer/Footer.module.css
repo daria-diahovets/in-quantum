@@ -2,7 +2,9 @@
   padding-top: 60px;
   padding-bottom: 100px;
   border-top: 1px solid white;
-  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.5), inset -100px 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.5),
+    inset -100px 0 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .wrapper {
@@ -75,12 +77,6 @@
   font-size: 1rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .links a:hover span {
-    animation: slide 0.5s;
-  }
-}
-
 .privacy {
   margin-top: 60px;
   display: flex;
@@ -124,7 +120,104 @@
   transform: scaleX(-1);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .links a:hover span {
+    animation: slide 0.5s;
+  }
+}
+
 @media (max-width: 1920px) {
+  .footer {
+    padding-top: 3.13vw;
+    padding-bottom: 5.21vw;
+    border-top: 1px solid white;
+    box-shadow: inset 2.21vw 0 5.21vw rgba(0, 0, 0, 0.5),
+      inset -5.21vw 0 5.21vw rgba(0, 0, 0, 0.5);
+  }
+
+  .wrapper img {
+    width: 21.35vw;
+    height: 5.21vw;
+  }
+
+  .row {
+    margin-top: 3.13vw;
+    gap: 1.04vw;
+  }
+
+  .row span {
+    font-family: var(--font-baradig-bold);
+    font-weight: 700;
+    font-size: 1.63vw;
+  }
+
+  .links {
+    margin-top: 3.13vw;
+    width: 43.23vw;
+    height: 6.35vw;
+    gap: 1.04vw;
+  }
+
+  .links::before {
+    width: 3.65vw;
+    height: 3.65vw;
+  }
+
+  .links::after {
+    width: 3.65vw;
+    height: 3.65vw;
+  }
+
+  .links a {
+    width: 7.29vw;
+    min-height: 3.03vw;
+  }
+
+  .links a span {
+    font-size: 0.625vw;
+  }
+
+  .privacy {
+    margin-top: 3.13vw;
+    gap: 1.56vw;
+  }
+
+  .privacy span {
+    font-size: 0.81vw;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-2.5vw);
+    }
+
+    51% {
+      transform: translateY(2.5vw);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #glass-left,
+  #glass-right {
+    width: 36.67vw;
+    height: 21.04vw;
+  }
+
+  #glass-left {
+    left: -10%;
+  }
+
+  #glass-right {
+    right: -10%;
+    transform: scaleX(-1);
+  }
 }
 @media (max-width: 768px) {
 }
