@@ -19,7 +19,6 @@
 html {
   font-size: 12px;
   scroll-behavior: smooth;
-  scroll-timeline: --window block;
 }
 
 body {
@@ -99,6 +98,10 @@ p {
   text-align: center;
 }
 
+.swiper {
+  display: none;
+}
+
 @media (hover: hover) and (pointer: fine) {}
 
 @media (max-width: 1920px) {
@@ -141,6 +144,22 @@ p {
   p {
     font-size: 3.2vw;
   }
+  .swiper {
+    display: block;
+    margin-top: 60px;
+  }
+  .swiper-button-prev,.swiper-button-next {
+    width: 7vw !important;
+  }
+  .swiper-button-prev {
+    content: url("/images/ui/slider-arrow.svg");
+    transform: scaleX(-1);
+    left: 5% !important;
+  }
+  .swiper-button-next {
+    content: url("/images/ui/slider-arrow.svg");
+    right: 5% !important;
+  }
 }
 
 @media (max-width: 480px) {}
@@ -162,6 +181,6 @@ Media queries
 }
 @media (max-width: 480px) {
 }
-@media (max-width: 320px) {
+@media (max-width: 375px) {
 }
 */

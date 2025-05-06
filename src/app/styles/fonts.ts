@@ -21,4 +21,11 @@ const proximaExtraBold = localFont({
   style: "normal",
 });
 
-export { baradigBold, proximaBold, proximaExtraBold };
+const sourceSansRegular = localFont({
+  variable: "--font-source-sans",
+  src: "../fonts/SourceSansPro-Regular.woff",
+  weight: "400",
+  style: "normal",
+});
+
+export { baradigBold, proximaBold, proximaExtraBold, sourceSansRegular };

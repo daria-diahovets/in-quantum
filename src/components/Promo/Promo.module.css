@@ -1,5 +1,5 @@
 .promo {
-  padding: 160px 0 80px 0;
+  padding: 140px 0 80px 0;
   position: relative;
   overflow: clip hidden;
 }
@@ -29,7 +29,7 @@
   width: 100%;
   height: 65%;
   background: #000000;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   z-index: -1;
 }
 
@@ -51,26 +51,30 @@
   background: linear-gradient(90deg, rgba(0, 0, 0, .1) 0%, rgba(133, 129, 129, .1) 50%, rgba(0, 0, 0, .1) 100%);
   border-width: 1px;
   border-style: solid;
+  backdrop-filter: blur(10px);
 }
 
-@keyframes controller {
-  from {
-    top: 30%;
-  }
-
-  to {
-    top: 40%;
-  }
+#rhombus-left,
+#rhombus-right {
+  position: absolute;
+  top: 15%;
+  z-index: -2;
 }
 
-#controller {
+#rhombus-left {
+  left: 10%;
+}
+
+#rhombus-right {
+  right: 10%;
+  transform: scaleX(-1);
+}
+
+#sphere {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 30%;
   transform: translateX(-50%);
-  animation-name: controller;
-  animation-timing-function: ease;
-  animation-timeline: --window;
   z-index: -2;
 }
 
@@ -80,7 +84,7 @@
   border: none;
   border-radius: 100%;
   filter: blur(100px);
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: -3;
 }
 
@@ -121,7 +125,7 @@
 
 @media (max-width: 1920px) {
   .promo {
-    padding: 8.3vw 0 4.2vw 0;
+    padding: 7.8vw 0 4.2vw 0;
   }
 
   .blocks {
@@ -134,14 +138,20 @@
     padding: 1.3vw 2.65vw;
   }
 
-  #controller {
-    width: 43vw;
-    height: 35.5vw;
+  #rhombus-left,
+  #rhombus-right {
+    width: 25.3vw;
+    height: 25.9vw;
+  }
+
+  #sphere {
+    width: 50.6vw;
+    height: 34.15vw;
   }
 
   #blur.blur-center {
-    width: 36.5vw;
-    height: 36.5vw;
+    width: 40vw;
+    height: 40vw;
   }
 
   #blur.blur-left {
@@ -165,23 +175,36 @@
     padding: 19.6vw 0 10.5vw 0;
   }
 
+  .promo::after {
+    height: 70%;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+  }
+
+
   .blocks {
     display: none;
   }
-  @keyframes controller {
-    from {
-      top: 20%;
-    }
 
-    to {
-      top: 30%;
-    }
+  #rhombus-left,
+  #rhombus-right {
+    width: calc(484px / 1.3);
+    height: calc(497px / 1.3);
+    top: 20%;
+    opacity: .7;
   }
 
-  #controller {
-    width: 82.6vw;
-    height: 68.1vw;
-    top: 20%;
+  #rhombus-left {
+    left: -20%;
+  }
+
+  #rhombus-right {
+    right: -20%;
+  }
+
+  #sphere {
+    width: 97.1vw;
+    height: 65.8vw;
+    top: 30%;
   }
 
   #blur.blur-center {
@@ -205,5 +228,11 @@
   .btn div {
     font-size: 4vw;
     margin-bottom: 2.7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo {
+    padding: 80px 0 10.5vw 0;
   }
 }

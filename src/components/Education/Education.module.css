@@ -40,32 +40,20 @@
   margin: 40px auto 105px auto;
 }
 
-@keyframes glass {
-  from {
-    top: -10%;
-  }
-
-  to {
-    top: 0%;
-  }
-}
-
 #glass-left,
 #glass-right {
   position: absolute;
-  animation-name: glass;
-  animation-timing-function: ease;
-  animation-timeline: --window;
+  top: -25%;
+  width: 700px;
+  height: 700px;
 }
 
 #glass-left {
-  top: 0%;
-  left: 20px;
+  left: -15%;
 }
 
 #glass-right {
-  top: 0%;
-  right: 20px;
+  right: -15%;
   transform: scaleX(-1);
 }
 
@@ -88,7 +76,6 @@
   align-items: center;
   justify-content: center;
   width: 360px;
-  /* border: 1px solid white; */
   border-radius: 100%;
   aspect-ratio: 1;
   box-shadow:
@@ -103,23 +90,11 @@
 .item .image img {
   object-fit: contain;
   height: fit-content;
-}
-
-.item:nth-child(1) .image img {
-  width: 283px;
+  width: 250px;
 }
 
 .item:nth-child(2) .image img {
-  width: 269px;
-}
-
-.item:nth-child(3) .image img {
-  width: 200px;
-  transform: translateX(-10px);
-}
-
-.item:nth-child(4) .image img {
-  width: 240px;
+  width: 220px;
 }
 
 .item .text {
@@ -150,16 +125,8 @@
 
   #glass-left,
   #glass-right {
-    width: 24.5vw;
-    height: 20.85vw;
-  }
-
-  #glass-left {
-    left: 1.1vw;
-  }
-
-  #glass-right {
-    right: 1.1vw;
+    width: 36.5vw;
+    height: 36.5vw;
   }
 
   .wrapper {
@@ -174,21 +141,12 @@
     margin-bottom: 0.8vw;
   }
 
-  .item:nth-child(1) .image img {
-    width: 14.75vw;
+  .item .image img {
+    width: 13.5vw;
   }
 
   .item:nth-child(2) .image img {
-    width: 14.05vw;
-  }
-
-  .item:nth-child(3) .image img {
-    width: 10.45vw;
-    transform: translateX(-0.55vw);
-  }
-
-  .item:nth-child(4) .image img {
-    width: 12.5vw;
+    width: 12.05vw;
   }
 
   .item .text {
@@ -219,29 +177,19 @@
 
   #glass-left,
   #glass-right {
-    width: 47vw;
-    height: 40vw;
+    width: 50vw;
+    height: 50vw;
     opacity: .5;
-  }
-
-  @keyframes glass {
-    from {
-      top: -5%;
-    }
-
-    to {
-      top: 0%;
-    }
+    z-index: -1;
+    top: 0;
   }
 
   #glass-left {
-    top: 0;
-    left: -25%;
+    left: -30%;
   }
 
   #glass-right {
-    top: 0;
-    right: -25%;
+    right: -30%;
   }
 
   .wrapper {
@@ -255,21 +203,12 @@
     margin-bottom: 4vw;
   }
 
-  .item:nth-child(1) .image img {
-    width: 52.2vw;
+  .item .image img {
+    width: 50vw;
   }
 
   .item:nth-child(2) .image img {
-    width: 52.2vw;
-  }
-
-  .item:nth-child(3) .image img {
-    width: 41.7vw;
-    transform: translateX(-2.7vw);
-  }
-
-  .item:nth-child(4) .image img {
-    width: 52.2vw;
+    width: 45vw;
   }
 
   .item .text {

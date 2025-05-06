@@ -8,7 +8,7 @@ interface IBtn {
 
 export default function Button({ link, children }: IBtn) {
   return (
-    <a href={link} className={classes.btn}>
+    <a target="_blank" href={link} className={classes.btn}>
       <span>{children}</span>
     </a>
   );

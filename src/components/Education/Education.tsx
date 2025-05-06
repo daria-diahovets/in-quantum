@@ -10,15 +10,15 @@ export default function Education() {
           id={classes["glass-left"]}
           src="/images/education/glass.png"
           alt="glass"
-          width={470}
-          height={400}
+          width={1000}
+          height={1000}
         />
         <Image
           id={classes["glass-right"]}
           src="/images/education/glass.png"
           alt="glass"
-          width={470}
-          height={400}
+          width={1000}
+          height={1000}
         />
         <h2 className="purple">навчання</h2>
         <h3>Вчися граючи. Кодуй як профі.</h3>
@@ -93,7 +93,7 @@ export default function Education() {
             </div>
           </div>
         </div>
-        <Button link="">придбати підписку</Button>
+        <Button link="https://docs.google.com/forms/d/e/1FAIpQLSf2nHbHP0m9lf0UZyx7J3LCQCaWFPtrIlK1sXtljSKnd0zdmw/viewform?usp=dialog">придбати підписку</Button>
       </div>
     </section>
   );

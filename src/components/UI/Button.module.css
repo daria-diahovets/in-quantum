@@ -15,21 +15,24 @@
   border-radius: 24px;
   margin: 0 auto;
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .btn::after {
   content: "";
   display: block;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: inherit;
-  height: inherit;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
   border-radius: inherit;
   opacity: .8;
-  background-image: url("/images/button/bg.png");
+  background-image: url("/images/ui/button-bg.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn span {

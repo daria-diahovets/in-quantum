@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { proximaBold, proximaExtraBold, baradigBold } from "./styles/fonts";
+import {
+  proximaBold,
+  proximaExtraBold,
+  baradigBold,
+  sourceSansRegular,
+} from "./styles/fonts";
 
 import "./styles/globals.css";
 
@@ -44,6 +49,7 @@ export default function RootLayout({
         className={`
           ${proximaBold.variable} 
           ${proximaExtraBold.variable} 
+          ${sourceSansRegular.variable} 
           ${baradigBold.variable}`}
       >
         {children}

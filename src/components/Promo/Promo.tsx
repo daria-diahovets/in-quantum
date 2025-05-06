@@ -12,11 +12,25 @@ export default function Promo() {
           <span className="purple"> ІТ</span>
         </h1>
         <Image
-          id={classes.controller}
-          src="/images/promo/controller.png"
-          alt="controller"
-          width={825}
-          height={680}
+          id={classes["rhombus-left"]}
+          src="/images/promo/rhombus.png"
+          alt="sphere"
+          width={484}
+          height={497}
+        />
+        <Image
+          id={classes["rhombus-right"]}
+          src="/images/promo/rhombus.png"
+          alt="sphere"
+          width={484}
+          height={497}
+        />
+        <Image
+          id={classes.sphere}
+          src="/images/promo/sphere.png"
+          alt="sphere"
+          width={970}
+          height={655}
         />
         <div id={classes.blur} className={classes["blur-left"]}></div>
         <div id={classes.blur} className={classes["blur-center"]}></div>
@@ -41,7 +55,9 @@ export default function Promo() {
             отримай знижку до -60%
             <br /> тільки сьогодні!
           </div>
-          <Button link="">придбати підписку</Button>
+          <Button link="https://docs.google.com/forms/d/e/1FAIpQLSf2nHbHP0m9lf0UZyx7J3LCQCaWFPtrIlK1sXtljSKnd0zdmw/viewform?usp=dialog">
+            придбати підписку
+          </Button>
         </div>
       </div>
     </section>
