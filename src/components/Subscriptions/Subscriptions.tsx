@@ -48,14 +48,14 @@ export default function Subscriptions() {
               <h4>{card.title}</h4>
               <p>{card.descr}</p>
               <div className={classes.price}>
-                <button>
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf2nHbHP0m9lf0UZyx7J3LCQCaWFPtrIlK1sXtljSKnd0zdmw/viewform?usp=dialog">
                   <Image
                     src="/images/subscriptions/buy.svg"
                     alt="buy"
                     width={48}
                     height={48}
                   />
-                </button>
+                </a>
                 <div className={classes["price-list"]}>
                   <span>{card.price.standart} грн</span>
                   <span>{card.price.discount} грн</span>

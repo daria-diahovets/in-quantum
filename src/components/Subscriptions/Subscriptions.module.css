@@ -112,7 +112,7 @@
   align-items: center;
 }
 
-.price button {
+.price a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,12 +134,12 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .price button:hover {
+  .price a:hover {
     background-color: #7122d2;
   }
 }
 
-.price button:active {
+.price a:active {
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
     inset 0px -2px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(2px);
@@ -201,13 +201,13 @@
     gap: 1.56vw;
   }
 
-  .price button {
+  .price a {
     width: 3.65vw;
     height: 3.65vw;
     border-radius: 0.42vw;
   }
 
-  .price button img {
+  .price a img {
     width: 2.5vw;
     height: 2.5vw;
   }
@@ -264,7 +264,7 @@
     gap: 2.7vw;
   }
 
-  .price button {
+  .price a {
     width: 8vw;
     height: 8vw;
     border-radius: 1.4vw;
@@ -272,7 +272,7 @@
       inset 0px -0.55vw 1px rgba(0, 0, 0, 0.25);
   }
 
-  .price button img {
+  .price a img {
     width: 4.5vw;
     height: 4.5vw;
 
