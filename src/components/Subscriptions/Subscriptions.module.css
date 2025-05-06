@@ -35,44 +35,19 @@
 
 #glass-left,
 #glass-right {
+  width: 700px;
+  height: 700px;
   position: absolute;
-}
-
-@keyframes glass-left {
-  from {
-    bottom: -25%;
-  }
-
-  to {
-    bottom: -35%;
-  }
-}
-
-@keyframes glass-right {
-  from {
-    top: -5%;
-  }
-
-  to {
-    top: -12%;
-  }
+  top: -40%;
 }
 
 #glass-left {
-  left: -10%;
-  top: -12%;
-  animation-name: glass-left;
-  animation-timing-function: ease;
-  animation-timeline: --window;
-  transform: scaleX(-1);
+  left: -20%;
 }
 
 #glass-right {
-  right: -10%;
-  top: -12%;
-  animation-name: glass-right;
-  animation-timing-function: ease;
-  animation-timeline: --window;
+  right: -20%;
+  transform: scaleX(-1);
 }
 
 .wrapper {
@@ -137,7 +112,7 @@
   align-items: center;
 }
 
-.price div {
+.price button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,15 +124,22 @@
   border-radius: 8px;
   cursor: pointer;
   transition: var(--transition);
+  outline: none;
+  border: none;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .price div:hover {
+  .price button:hover {
     background-color: #7122d2;
   }
 }
 
-.price div:active {
+.price button:active {
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
     inset 0px -2px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(2px);
@@ -165,7 +147,16 @@
 
 .price span {
   color: var(--purple-color-text);
-  font-size: 4rem;
+}
+
+.price span:first-child {
+  font-size: 2rem;
+  filter: brightness(50%);
+  text-decoration: line-through;
+}
+
+.price span:last-child {
+  font-size: 3.5rem;
 }
 
 @media (max-width: 1920px) {
@@ -183,8 +174,8 @@
 
   #glass-left,
   #glass-right {
-    width: 30.73vw;
-    height: 25.1vw;
+    width: 36.5vw;
+    height: 36.5vw;
   }
 
   .wrapper {
@@ -210,19 +201,23 @@
     gap: 1.56vw;
   }
 
-  .price div {
+  .price button {
     width: 3.65vw;
     height: 3.65vw;
     border-radius: 0.42vw;
   }
 
-  .price div img {
+  .price button img {
     width: 2.5vw;
     height: 2.5vw;
   }
 
-  .price span {
-    font-size: 2.5vw;
+  .price span:first-child {
+    font-size: 1.3vw;
+  }
+
+  .price span:last-child {
+    font-size: 2.2vw;
   }
 }
 
@@ -237,8 +232,11 @@
 
   #glass-left,
   #glass-right {
-    width: 39.1vw;
-    height: 32.6vw;
+    width: 40vw;
+    height: 40vw;
+    z-index: -1;
+    opacity: .8;
+    top: 0;
   }
 
   .wrapper {
@@ -266,21 +264,25 @@
     gap: 2.7vw;
   }
 
-  .price div {
-    width: 6.6vw;
-    height: 6.6vw;
+  .price button {
+    width: 8vw;
+    height: 8vw;
     border-radius: 1.4vw;
     box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.25),
       inset 0px -0.55vw 1px rgba(0, 0, 0, 0.25);
   }
 
-  .price div img {
-    width: 4vw;
-    height: 4vw;
+  .price button img {
+    width: 4.5vw;
+    height: 4.5vw;
 
   }
 
-  .price span {
-    font-size: 4.8vw;
+  .price span:first-child {
+    font-size: 3vw;
+  }
+
+  .price span:last-child {
+    font-size: 4.5vw;
   }
 }

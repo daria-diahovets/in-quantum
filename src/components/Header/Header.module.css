@@ -99,6 +99,21 @@
 
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
 
-@media (max-width: 320px) {}
+  #hamburger,
+  #close {
+    width: 25px;
+    height: 25px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 375px) {
+}

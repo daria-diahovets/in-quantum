@@ -47,17 +47,22 @@
   grid-column: 2 / 4;
 }
 
-.merged p {
+.parag {
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   width: 650px;
 }
 
 .element {
+  width: 390px;
+  aspect-ratio: 1;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 52px;
+  border-radius: var(--border-radius);
+  margin: 0 auto;
 }
 
-.body {
+.thumb {
   width: 390px;
   height: 275px;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -65,7 +70,7 @@
     0px 0px 20px rgba(255, 255, 255, 0.3);
 }
 
-.body img {
+.thumb img {
   width: inherit;
   height: inherit;
   object-fit: cover;
@@ -101,6 +106,7 @@
     padding-top: 5vw;
     padding-bottom: 5vw;
   }
+
   .team::before {
     top: -0.33vw;
   }
@@ -109,15 +115,20 @@
     gap: 1.6vw;
   }
 
-  .merged p {
+  .parag {
     margin-top: 1.3vw;
     width: 34.2vw;
   }
 
-  .body {
+  .element {
+    width: 20.5vw;
+  }
+
+  .thumb {
     width: 20.5vw;
     height: 14.95vw;
   }
+
   .text {
     width: 20.5vw;
     height: 6.04vw;
@@ -137,27 +148,31 @@
     padding-top: 6.6vw;
     padding-bottom: 10.5vw;
   }
+
   .team::before {
     top: -1.4vw;
   }
+
   .grid {
-    gap: 6vw;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: unset;
-    grid-auto-flow: unset;
+    display: none;
   }
-  .merged {
-    grid-column: unset;
-  }
-  .merged p {
+
+  /* .team-phone {} */
+
+  .parag {
     margin-top: 2vw;
     width: 71.7vw;
   }
 
-  .body {
+  .element {
+    width: 65.2vw;
+  }
+
+  .thumb {
     width: 65.2vw;
     height: 45.6vw;
   }
+
   .text {
     width: 65.2vw;
     height: 19.6vw;
