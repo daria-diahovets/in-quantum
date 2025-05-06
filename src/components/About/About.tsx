@@ -6,27 +6,28 @@ export default function About() {
     <section id="about" className={classes.about}>
       <div className="container">
         <Image
-          id={classes["glass-left"]}
-          src="/images/promo/glass-left.png"
-          alt="glass"
-          width={527}
-          height={572}
+          id={classes["donut-left"]}
+          src="/images/about/donut-left.png"
+          alt=""
+          width={670}
+          height={652}
         />
         <Image
-          id={classes["glass-right"]}
-          src="/images/promo/glass-right.png"
-          alt="glass"
-          width={528}
-          height={543}
+          id={classes["donut-right"]}
+          src="/images/about/donut-right.png"
+          alt=""
+          width={670}
+          height={652}
         />
         <h2>
           <span className="purple">ПРО нас</span>
         </h2>
         <h3>Хто ми і чому нам можна довіряти?</h3>
+        <div className={classes.blur}></div>
         <Image
             id={classes.pipe}
-            width={530}
-            height={518}
+            width={520}
+            height={630}
             src={"/images/about/pipe.png"}
             alt="pipe"
           />

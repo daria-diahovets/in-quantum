@@ -21,17 +21,17 @@ export default function Footer() {
           <a href="#education">
             <span>Навчання</span>
           </a>
-          <a href="#team">
+          {/* <a href="#team">
             <span>Команда</span>
-          </a>
+          </a> */}
           <a href="#subscription">
             <span>Підписки</span>
           </a>
         </div>
         <div className={classes.privacy}>
-          <span>Privacy policy</span>
-          <span>Cookie policy</span>
-          <span>@ 2025 iSYB. All rights reserved.</span>
+          {/* <span>Privacy policy</span> */}
+          {/* <span>Cookie policy</span> */}
+          <a href="#">@ 2025 inQuantum. All rights reserved.</a>
         </div>
         <Image
           id={classes["glass-left"]}

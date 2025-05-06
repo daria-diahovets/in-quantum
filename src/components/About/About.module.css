@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   overflow: clip visible;
+  /* overflow-y: hidden; */
   padding-top: 100px;
   padding-bottom: 200px;
 }
@@ -45,16 +46,18 @@
   justify-content: space-between;
 }
 
-@keyframes pipe {
-  from {
-    transform: rotate(0) translate(-50%) scale(1);
-    top: 35%;
-  }
-
-  to {
-    transform: rotate(10deg) translate(-50%) scale(0.9);
-    top: 40%;
-  }
+.blur {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  filter: blur(200px);
+  opacity: .3;
+  background-color: var(--purple-color-text);
+  z-index: -1;
 }
 
 #pipe {
@@ -63,9 +66,6 @@
   left: 50%;
   transform-origin: center;
   transform: translate(-50%);
-  animation-name: pipe;
-  animation-timing-function: ease;
-  animation-timeline: --window;
 }
 
 .card {
@@ -81,37 +81,23 @@
   padding: 23px 86px;
 }
 
-@keyframes glass {
-  from {
-    top: -60%;
-    transform: rotate(0deg);
-  }
-
-  to {
-    top: -40%;
-    transform: rotate(10deg);
-  }
-}
-
-#glass-left {
+#donut-left,
+#donut-right {
+  width: 670px;
+  height: 652px;
   position: absolute;
-  left: -70px;
-  top: -40%;
-  animation-name: glass;
-  animation-timing-function: ease;
-  animation-timeline: --window;
+  top: -50%;
 }
 
-#glass-right {
-  position: absolute;
-  right: -70px;
-  top: -40%;
-  animation-name: glass;
-  animation-timing-function: ease;
-  animation-timeline: --window;
+#donut-left {
+  left: -10%;
 }
 
-@media (min-width: 1921px) {
+#donut-right {
+  right: -10%;
+}
+
+@media (min-width: 2400px) {
   .about {
     overflow: visible;
   }
@@ -125,12 +111,15 @@
   }
 
   .wrapper {
-    margin-top: 8.3vw;
+    margin-top: 200px;
   }
 
+  .blur {
+    width: 31.3vw;
+  }
   #pipe {
-    width: 27.6vw;
-    height: 27vw;
+    width: 27.1vw;
+    height: 32.8vw;
   }
 
   .card {
@@ -138,16 +127,10 @@
     padding: 1.2vw 4.5vw
   }
 
-  #glass-left {
-    width: 27.4vw;
-    height: 29.8vw;
-    left: -3.6vw;
-  }
-
-  #glass-right {
-    width: 27.5vw;
-    height: 28.3vw;
-    right: -3.6vw;
+  #donut-left,
+  #donut-right {
+    width: 34.9vw;
+    height: 33.9vw;
   }
 }
 
@@ -164,6 +147,9 @@
     gap: 7vw;
   }
 
+  .blur {
+    width: 50vw;
+  }
   #pipe {
     display: none;
   }
@@ -173,29 +159,19 @@
     padding: 5.3vw 6.6vw;
   }
 
-  @keyframes glass {
-    from {
-      top: 50%;
-      transform: rotate(0deg);
-    }
-
-    to {
-      top: 40%;
-      transform: rotate(10deg);
-    }
+  #donut-left,
+  #donut-right {
+    width: 58vw;
+    height: 56.4vw;
   }
 
-  #glass-left {
-    top: 50%;
-    width: 27.4vw;
-    height: 29.8vw;
-    left: -15%;
+  #donut-left {
+    top: 40%;
+    left: -40%;
   }
 
-  #glass-right {
-    top: 50%;
-    width: 27.5vw;
-    height: 28.3vw;
-    right: -15%;
+  #donut-right {
+    top: 40%;
+    right: -40%;
   }
 }
