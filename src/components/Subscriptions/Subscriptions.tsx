@@ -7,8 +7,8 @@ const SUBSCRIPTIONS_ARR = [
     descr:
       "Отримайте повний доступ до наших курсів програмування. Навчайтесь у зручному темпі, створюйте проекти та відкривайте нові можливості в IT-світі.",
     price: {
-      standart: 4000,
-      discount: 1599,
+      standart: 3750,
+      discount: 1499,
     },
   },
   {
@@ -16,8 +16,8 @@ const SUBSCRIPTIONS_ARR = [
     descr:
       "Ідеальний вибір для родин, які хочуть навчатися разом! Долучайтеся до наших курсів усією сім’єю за спеціальною ціною. Разом відкривайте світ технологій та створюйте майбутнє.",
     price: {
-      standart: 3750,
-      discount: 1499,
+      standart: 4000,
+      discount: 1599,
     },
   },
 ];
@@ -48,7 +48,10 @@ export default function Subscriptions() {
               <h4>{card.title}</h4>
               <p>{card.descr}</p>
               <div className={classes.price}>
-                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf2nHbHP0m9lf0UZyx7J3LCQCaWFPtrIlK1sXtljSKnd0zdmw/viewform?usp=dialog">
+                <a
+                  target="_blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf2nHbHP0m9lf0UZyx7J3LCQCaWFPtrIlK1sXtljSKnd0zdmw/viewform?usp=dialog"
+                >
                   <Image
                     src="/images/subscriptions/buy.svg"
                     alt="buy"
