@@ -82,7 +82,8 @@
   font-family: var(--font-source-sans);
   font-size: 1.3rem;
 }
-@media(hover: hover) and (pointer: fine ) {
+
+@media(hover: hover) and (pointer: fine) {
   .privacy a:hover {
     text-decoration: underline;
   }
@@ -129,13 +130,55 @@
   }
 }
 
+.social {
+  display: flex;
+  margin-top: 50px;
+  gap: 40px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 80px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, .5);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, .3);
+  transition: var(--transition);
+}
+
+.social img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.social a:nth-child(1) img {
+  filter: drop-shadow(0px 2px 10px #0b7febb8);
+}
+
+.social a:nth-child(2) img {
+  filter: drop-shadow(0px 2px 10px #2aa9ed9d);
+}
+
+.social a:nth-child(3) img {
+  filter: drop-shadow(0px 2px 10px #c0309a98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social a:hover {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, .3), 0px 0px 30px rgba(255, 255, 255, .2);
+  }
+}
+
 @media (max-width: 1920px) {
   .footer {
     padding-top: 3.13vw;
     padding-bottom: 5.21vw;
   }
 
-  .wrapper img {
+  .logo {
     width: 21.35vw;
     height: 5.21vw;
   }
@@ -198,6 +241,20 @@
     width: 30vw;
     height: 30vw;
   }
+
+  .social {
+    margin-top: 2.5vw;
+    gap: 2.1vw;
+  }
+  .social a {
+    border-radius: 1.1vw;
+    width: 4.2vw;
+    box-shadow: 0px 0px 1.1vw rgba(255, 255, 255, .3);
+  }
+  .social img {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -206,7 +263,7 @@
     padding-bottom: 7.9vw;
   }
 
-  .wrapper img {
+  .logo {
     width: 52.1vw;
     height: 13.1vw;
   }
@@ -249,5 +306,19 @@
   #glass-left,
   #glass-right {
     display: none;
+  }
+
+  .social {
+    margin-top: 6.6vw;
+    gap: 5.3vw;
+  }
+  .social a {
+    border-radius: 2.7vw;
+    width: 11.7vw;
+    box-shadow: 0px 0px 2.7vw rgba(255, 255, 255, .3);
+  }
+  .social img {
+    width: 6.6vw;
+    height: 6.6vw;
   }
 }

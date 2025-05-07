@@ -10,6 +10,7 @@ export default function Footer() {
           height={100}
           src={"/images/footer/logo.svg"}
           alt="logo"
+          className={classes.logo}
         />
         <div className={classes.links}>
           <a href="#promo">
@@ -47,6 +48,35 @@ export default function Footer() {
           width={704}
           height={404}
         />
+        <div className={classes.social}>
+          <a /* target="_blank" */ href="#">
+            <Image
+              src="/images/footer/facebook.svg"
+              alt=""
+              width={50}
+              height={50}
+            />
+          </a>
+          <a target="_blank" href="https://t.me/inQuantum_ua">
+            <Image
+              src="/images/footer/telegram.svg"
+              alt=""
+              width={50}
+              height={50}
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/inquantum.ua?igsh=MTdnOHhxajNvOTEzZA=="
+          >
+            <Image
+              src="/images/footer/instagram.svg"
+              alt=""
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
